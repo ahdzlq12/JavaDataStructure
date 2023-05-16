@@ -1,4 +1,4 @@
-package me.java.datastructure.list.implement;
+package me.java.datastructure.list.implement.list;
 
 public interface IList<T> {
 
