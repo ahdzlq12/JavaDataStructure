@@ -3,14 +3,18 @@ package me.java.datastructure.linkedlist;
 import me.java.datastructure.list.IList;
 import org.w3c.dom.Node;
 
+import java.beans.PropertyVetoException;
+
 public class LinkedList<T> implements IList<T> {
 
     private int size;
-    private Node head;
+    public Node head;
 
     public LinkedList(){
         this.head = new Node(null);
     }
+
+    //추가할때, head는 size에 카운트 안함
 
     @Override
     public void add(T t) {
@@ -23,10 +27,11 @@ public class LinkedList<T> implements IList<T> {
         this.size++;
     }
 
-
-
     @Override
     public void insert(int index, T t) {
+        if(index < 0 || index >= this.size)
+            throw new IndexOutOfBoundsException();
+
         Node prev = this.head;
         Node curr = prev.next;
 

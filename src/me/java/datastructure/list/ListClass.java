@@ -1,6 +1,5 @@
-package me.java.datastructure.list.implement.list;
+package me.java.datastructure.list;
 
-import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
 
